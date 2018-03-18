@@ -1,9 +1,9 @@
 
-public class CodeLineStat extends LineStat {
-
+public class NullLineStat extends LineStat  {
+	
 	public void LineOver()
 	{
-		if((!IsOnlyContainOneChar())&&GetValidPos(0)!=-1)
+		if((IsOnlyContainOneChar())||GetValidPos(0)==-1)
 		{count++;}
 			
 		//System.out.println(currentLine);	
@@ -11,5 +11,4 @@ public class CodeLineStat extends LineStat {
 		currentLine="";
 	}
 	
-
 }

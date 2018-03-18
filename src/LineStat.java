@@ -55,4 +55,14 @@ public class LineStat extends Statistics {
 			return true;
 		}
 	}
+	
+protected	boolean IsOnlyContainOneChar()
+	{
+		if(GetValidPos(0)==-1)return false;
+		
+		if(GetValidPos(GetValidPos(0)+1)==-1)return true;
+		
+		return false;
+		
+	}
 }

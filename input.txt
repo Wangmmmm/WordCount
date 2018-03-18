@@ -7,3 +7,7 @@ int main()
 	int  b = a;
 	printf("%d\n",b);
 }
+
+
+
+			

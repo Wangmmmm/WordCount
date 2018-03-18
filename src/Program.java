@@ -12,7 +12,7 @@ public class Program {
 	    
 		
 		Stats=new ArrayList<Statistics>();
-		Stats.add(new CodeLineStat());
+		Stats.add(new NullLineStat());
 		
 	    if (args.length==0)
 	    	{
