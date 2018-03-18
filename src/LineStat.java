@@ -65,4 +65,40 @@ protected	boolean IsOnlyContainOneChar()
 		return false;
 		
 	}
+protected boolean IsOneSingleCharCommentLine()
+{
+	int index=GetValidPos(0);
+	if(index==-1)return false;
+	
+	if(IsOnlyContainOneChar())return false;
+	
+	int index2=GetValidPos(index+1);
+	if(index2==-1)return false;
+	
+	
+	if(currentLine.charAt(index2)!='/')return false;
+	
+	if(currentLine.length()==index2+1)return false;
+	
+	if(currentLine.charAt(index2+1)!='/')return false;
+	
+	
+	return true;
+}
+
+boolean IsOnlyContainComment()
+{
+	int index=GetValidPos(0);
+	if(index==-1)return false;
+	
+	if(currentLine.length()>=index+2)
+	{
+		//System.out.println(currentLine.charAt(index));
+		if(currentLine.charAt(index)=='/'&&currentLine.charAt(index+1)=='/')
+			return true;
+	}
+	
+	return false;
+}
+
 }
