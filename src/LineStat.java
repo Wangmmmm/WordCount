@@ -35,7 +35,7 @@ public class LineStat extends Statistics {
 		
 		for(int i=beginIndex;i<currentLine.length();i++)
 		{
-			if( TestValid(currentLine.charAt(i)))continue;
+			if( !TestValid(currentLine.charAt(i)))continue;
 			return i;
 		}
 		
