@@ -12,7 +12,7 @@ public class Program {
 	    
 		
 		Stats=new ArrayList<Statistics>();
-		Stats.add(new LineStat());
+		Stats.add(new CodeLineStat());
 		
 	    if (args.length==0)
 	    	{
@@ -89,30 +89,8 @@ public class Program {
 	}
 	
 	static String[] stopWordList;
-	static int GetCharacterCount()
-	{
-		return 0;
-	}
-	static int GetWordCount()
-	{
-		return 0;
-	}
-	static int GetLineCount()
-	{
-		return 0;
-	}
-	static int GetCodeLineCount()
-	{
-		return 0;
-	}
-	static int GetNullLineCount()
-	{
-		return 0;
-	}
-	static int GetCommentLineCount()
-	{
-		return 0;
-	}
+	
+	
 	
 	
 	//查找输入字符串数组中是否存在某字符串
