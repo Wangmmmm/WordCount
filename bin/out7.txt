@@ -1,0 +1,16 @@
+input.c,字符数:20
+input.c,单词数:4
+input.c,行数:2
+input.c,代码行/空行/注释行:2/0/0
+input1.c,字符数:44
+input1.c,单词数:7
+input1.c,行数:7
+input1.c,代码行/空行/注释行:5/1/1
+input2.c,字符数:44
+input2.c,单词数:7
+input2.c,行数:7
+input2.c,代码行/空行/注释行:5/1/1
+input3.c,字符数:44
+input3.c,单词数:7
+input3.c,行数:7
+input3.c,代码行/空行/注释行:5/1/1
