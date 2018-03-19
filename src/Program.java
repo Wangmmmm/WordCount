@@ -49,7 +49,7 @@ public class Program {
 		                	 
 		                 }
 		             }
-		           System.out.println(input.Print(file.getName())); 
+		          // System.out.println(input.Print(file.getName())); 
 		            input.BuildOutPutString(file.getName());
 		             reader.close();
 		         } catch (Exception e) {
@@ -77,8 +77,8 @@ public class Program {
 		}
 		
 
-	    
-
+		System.out.println("统计已完成");
+		
 	
 	
 	   

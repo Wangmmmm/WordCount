@@ -9,6 +9,14 @@ public class WordStat extends Statistics {
 	public static ArrayList<String>  stopList;
 	State state=State.Init;
 	String currentString="";
+	
+	public void Reset()
+	{
+		state=State.Init;
+		currentString="";
+		super.Reset();
+	}
+	
 	public void  Stat(char c) {
 		//if(c=='\r'||c=='\n')return ;
 		//count++;

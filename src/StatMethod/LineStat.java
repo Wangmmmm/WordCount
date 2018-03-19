@@ -101,6 +101,11 @@ boolean IsOnlyContainComment()
 	return false;
 }
 
+public void Reset()
+{
+	super.Reset();
+	currentLine="";
+}
 public String GetMethodName()
 {
 	return "ÐÐÊý";

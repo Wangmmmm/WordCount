@@ -14,4 +14,8 @@ public class Statistics {
 	{
 		return null;
 	}
+	public void Reset()
+	{
+		count=0;
+	}
 }

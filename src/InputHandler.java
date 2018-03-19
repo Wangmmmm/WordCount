@@ -122,7 +122,12 @@ public class InputHandler {
 	String outputMessage="";
 	public void BuildOutPutString(String inputfileName)
 	{
+		
 		outputMessage+=Print(inputfileName);
+		for(int i=0;i<stats.size();i++)
+		{
+			stats.get(i).Reset();
+		}
 	}
 	
 	public String GetOutputMessage()
