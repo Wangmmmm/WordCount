@@ -1,4 +1,4 @@
-
+package StatMethod;
 public class LineStat extends Statistics {
  protected String currentLine;
 	//子类需要调用初始化函数
@@ -101,4 +101,8 @@ boolean IsOnlyContainComment()
 	return false;
 }
 
+public String GetMethodName()
+{
+	return "行数";
+}
 }

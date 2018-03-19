@@ -1,3 +1,4 @@
+package StatMethod;
 
 public class NullLineStat extends LineStat  {
 	
@@ -10,5 +11,8 @@ public class NullLineStat extends LineStat  {
 		//System.out.println(GetValidPos(0));		
 		currentLine="";
 	}
-	
+	public String GetMethodName()
+	{
+		return "¿ÕÐÐ";
+	}
 }

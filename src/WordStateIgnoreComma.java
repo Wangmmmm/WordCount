@@ -1,19 +1,24 @@
 
+import java.util.ArrayList;
 
 
-public class WordStat extends Statistics {
+public class WordStateIgnoreComma  {
 	enum State{
 		Init,
 		CountingChar,
 		Skip
 	}
-	
+	ArrayList<String> stopList;
+	public WordStateIgnoreComma()
+	{
+		stopList=new ArrayList<String>();
+	}
 	State state=State.Init;
 	
+	String currentString="";
+	
+	
 	public void  Stat(char c) {
-		//if(c=='\r'||c=='\n')return ;
-		//count++;
-		
 		switch(state)
 		{
 		
@@ -21,7 +26,7 @@ public class WordStat extends Statistics {
 		{
 			if(TestValid(c))
 			{
-				count++;
+				currentString+=c;
 				state=State.CountingChar;
 			}
 			break;
@@ -30,10 +35,13 @@ public class WordStat extends Statistics {
 		{
 			if(TestValid(c))
 			{
+				currentString+=c;
 				break;
 			}
 			else
 			{
+				stopList.add(currentString);
+				currentString="";
 				state=State.Skip;
 				break;
 			}
@@ -43,7 +51,7 @@ public class WordStat extends Statistics {
 		{
 			if(TestValid(c))
 			{
-				count++;
+				currentString+=c;
 				state=State.CountingChar;
 			}
 			break;
@@ -54,14 +62,17 @@ public class WordStat extends Statistics {
 			break;
 		
 		}
-		
-		
-		
 		//System.out.println(count);
+	}
+	public	ArrayList<String> GetString()
+	{
+		stopList.add(currentString);
+		currentString="";
+	    return stopList;
 	}
 	boolean TestValid(char c)
 	{
-		if(c==' '||c=='\r'||c=='\n'||c==','||c=='\t')
+		if(c==' '||c=='\r'||c=='\n'||c=='\t')
 		{
 			return false;
 		}

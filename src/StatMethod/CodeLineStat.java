@@ -1,4 +1,4 @@
-
+package StatMethod;
 public class CodeLineStat extends LineStat {
 
 	public void LineOver()
@@ -6,13 +6,16 @@ public class CodeLineStat extends LineStat {
 		if((!IsOnlyContainOneChar())&&GetValidPos(0)!=-1)
 		{
 			if(!IsOneSingleCharCommentLine()&&! IsOnlyContainComment())
-			{count++;System.out.println(currentLine);}
+			{count++;}
 		}
 			
 		//System.out.println(currentLine);	
 		//System.out.println(GetValidPos(0));		
 		currentLine="";
 	}
-	
+	public String GetMethodName()
+	{
+		return "´úÂëÐÐ";
+	}
 
 }

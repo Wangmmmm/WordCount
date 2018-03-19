@@ -1,4 +1,4 @@
-
+package StatMethod;
 public class CharacterStat extends Statistics {
 
 	public void  Stat(char c) {
@@ -7,6 +7,9 @@ public class CharacterStat extends Statistics {
 		
 		//System.out.println(count);
 	}
-	
+	public String GetMethodName()
+	{
+		return "×Ö·ûÊý";
+	}
 	
 }

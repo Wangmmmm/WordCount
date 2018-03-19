@@ -1,4 +1,4 @@
-
+package StatMethod;
 public class CommentLineStat extends LineStat {
 
 	
@@ -16,5 +16,8 @@ public class CommentLineStat extends LineStat {
 	}
 
 	
-	
+	public String GetMethodName()
+	{
+		return "×¢ÊÍÐÐ";
+	}
 }
