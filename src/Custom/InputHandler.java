@@ -1,4 +1,5 @@
 package Custom;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -173,13 +174,7 @@ public class InputHandler {
 			fileArray=rootFile.listFiles();
 			if(fileArray.length==0)return null;
 			
-			for(int j=0;j<fileArray.length;j++)
-			{
-				if(fileArray[j].getName().endsWith(format))
-				{
-					files.add(fileArray[j]);
-				}
-			}
+			SetAllFile(fileArray,files,format);
 		}
 		else 
 		{
@@ -195,6 +190,23 @@ public class InputHandler {
 		
 		return files;
 	}
+	 void SetAllFile(File[] files,ArrayList<File> filelist,String format)
+	 {
+		 if(files.length==0)return ;
+		 for(int j=0;j<files.length;j++)
+			{
+				
+				if(files[j].getName().endsWith(format))
+				{
+					filelist.add(files[j]);
+				}
+				else if(files[j].isDirectory())
+				{
+					SetAllFile(files[j].listFiles(),filelist,format);
+				}
+			}
+	 }
+	 
 	 int StringsContain(String s)
 		{
 			for(int i=0;i<inputStrings.length;i++)
